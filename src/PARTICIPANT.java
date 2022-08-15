@@ -4,7 +4,6 @@ public class PARTICIPANT {
 
     //Encapsulated data memebers
     //exist within this class only
-
     private int partNumber;//This data member stores the first name of a participant.
     private String partFName;
     private int smsCount;
@@ -50,8 +49,8 @@ public class PARTICIPANT {
 
         int index = 0;//Starting from element 1
 
-        double sum = 0;
-        int L = this.jScore.length;
+//        double sum = 0;
+//        int L = this.jScore.length;
 
         while (index < jAlias.length) {
 
@@ -60,18 +59,18 @@ public class PARTICIPANT {
 
             index++;
 
-            sum = sum + this.jScore[index];//Option 2
+            //sum = sum + this.jScore[index];//Option 2
 
         }
 
-        sum = this.jScore[0] + this.jScore[1] + this.jScore[2] + this.jScore[3] + this.jScore[4];//Option 1
+       //sum = this.jScore[0] + this.jScore[1] + this.jScore[2] + this.jScore[3] + this.jScore[4];//Option 1
 
-        this.avgJscore = sum / L;
+        //this.avgJscore = sum / L;
 
+        getAverageJudgeScore();
 
 
     }
-
     public double determineMinScore(){
 
         //Task: Find a sorting algo
@@ -79,7 +78,6 @@ public class PARTICIPANT {
         return this.jScore[0];
 
     }
-
     public void display(){
 
         //Task: implement the display Method
@@ -91,7 +89,7 @@ public class PARTICIPANT {
          * */
 
     }
-
+    //Example
     public String getParticipantFirstName(){
 
         return  this.partFName;
@@ -100,12 +98,29 @@ public class PARTICIPANT {
 
     /**public double getAverageJudgeScore()
      * This get method returns the value of data
-     member participantSurname.
+     member participantSurname.*/
+    public double getAverageJudgeScore(){
 
+        //Calculating the avg withing the get method Opt. 3
+        double Total = this.jScore[0] + this.jScore[1] + this.jScore[2] + this.jScore[3] + this.jScore[4];//Option 1
 
+        int L = this.jScore.length; //Stores the length of an array
+
+        this.avgJscore = Total / L;
+
+        return this.avgJscore;
+
+    }
+
+     /**
      public Int getSmsCount()
      This get member method returns the value of
      data member smsCount.
      */
+     public int getSmsCount(){
+
+         return this.smsCount;
+
+     }
 
 }

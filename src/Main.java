@@ -2,51 +2,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] x =  {2, 5, 7, 6, 5, 8};
 
-        for ( int i = 0 ; i < x.length; i++)
-            print(x[i]);
+        PARTICIPANT[] p = new PARTICIPANT[3];//Becuase we are dealing with 3 participants
 
-        print("\n");
+        p[0] = new PARTICIPANT();
+        //Initialize the p[1] and p[2]
 
-        int temp;
+        PartManip _METHODS = new PartManip();
 
-        for (int i = x.length -1 ; i > 0 ; i--){
+        System.out.println( "====================\n" +
+                            "IDOLS SCORING SYSTEM\n" +
+                            "====================\n");
 
-            for (int j = 0 ; j < i; j++){
+        _METHODS.enterParticipantDetails(p[0] , p[1] , p[2]);
 
-                //Swapping
-                temp = x[j];
-                x[j] = x[j+ 1];
-                x[j+ 1] = temp;
-
-            }
-
-        }
-
-        System.out.println(
-                "After sorting "
-        );
-        for ( int i = 0 ; i < x.length; i++)
-            print(x[i]);
 
 
     }
 
-    static void print(String victor){
-
-        System.out.print(victor);
-
-    }
-    static void print(int victor){
-
-        System.out.print(victor);
-
-    }
-
-    static int sum(int x, int y){
-
-        return x + y;
-    }
 
 }
