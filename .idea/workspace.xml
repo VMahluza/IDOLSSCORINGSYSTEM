@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5582180c-178d-46ed-a31e-5563e93746cc" name="Changes" comment="Idols scoring system question 1">
-      <change afterPath="$PROJECT_DIR$/src/PartManip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PARTICIPANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PARTICIPANT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PartManip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PartManip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mahlu/OneDrive - University of Mpumalanga/Desktop&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -70,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660492536181</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Idols scoring system question 1">
+      <created>1660586512702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660586512702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,12 +103,12 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="PARTICIPANT" memberName="partNumber" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

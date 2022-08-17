@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 public class PARTICIPANT {
 
+    //====PART ONE=============================================================
+
     //Encapsulated data memebers
-    //exist within this class only
+    //exist within this class only, to access them we need the getters and the setters
     private int partNumber;//This data member stores the first name of a participant.
     private String partFName;
     private int smsCount;
@@ -13,9 +15,12 @@ public class PARTICIPANT {
 
     //Unencapsulated data members programiz.com
 
-    //accessModifier returnType nameOfmethod(para, para)
+    //====PART TWO=============================================================
+
     public PARTICIPANT() {
 
+        //The constructor here is used to initialize the data members from part One
+        //numeric default values are 0 and Object default values such as Strings are null
         this.partNumber = 0;
         this.partFName = null;
         this.smsCount = 0;
@@ -23,10 +28,6 @@ public class PARTICIPANT {
         //PARALLEL
         this.jAlias = new String[5];
         this.jScore = new double[5];
-
-        //gOOD  BAD
-        // 0.2  0.9
-
 
         int index = 0;
         while (index < jAlias.length) {
@@ -41,7 +42,11 @@ public class PARTICIPANT {
 
     }
 
+    ////====PART THREE=============================================================
+    //Receiving parameters from externals classes PartManip and Main and storing them in the members from part One
     public void setParticipantDetails(int partNumber, String partFName, int smsCount, String[] jAlias, double[] jScore){
+
+        //!!!!!!There are many options to calculate the avarage Score, if you decide to remove the comments Consult first
 
         this.partNumber = partNumber;
         this.partFName = partFName;
@@ -56,24 +61,43 @@ public class PARTICIPANT {
 
             this.jAlias[index] = jAlias[index];
             this.jScore[index] = jScore[index];
-
             index++;
-
             //sum = sum + this.jScore[index];//Option 2
-
         }
 
        //sum = this.jScore[0] + this.jScore[1] + this.jScore[2] + this.jScore[3] + this.jScore[4];//Option 1
 
         //this.avgJscore = sum / L;
 
-        getAverageJudgeScore();
+        getAverageJudgeScore();// comment thiss method call if you have ouut commented the above code forr calculating avg
 
 
     }
     public double determineMinScore(){
 
         //Task: Find a sorting algo
+
+        for (int i = 1; i < this.jScore.length ; i ++){
+
+            double JscoreTemp = this.jScore[i];
+            String JAliasTemp = this.jAlias[i];
+            int j = i - 1;
+
+            // Move elements of arr[0..i-1],
+            // that are greater than key, to one
+            // position ahead of their
+            // current position
+            while (j >= 0 && this.jScore[j] > JscoreTemp)
+            {
+                this.jScore[j + 1] = this.jScore[j];
+                this.jAlias[j + 1] = this.jAlias[j];
+                j = j - 1;
+            }
+            this.jScore[j + 1] = JscoreTemp;
+            this.jAlias[j + 1] = JAliasTemp;
+
+
+        }
 
         return this.jScore[0];
 
@@ -87,6 +111,11 @@ public class PARTICIPANT {
          * Average Score: 5.62
          * SMS Count: 420
          * */
+
+        System.out.println("Participant Name: " + this.partFName);//
+        System.out.println("Participant Number: " + this.partNumber);//
+        System.out.println("Average Score: " + this.avgJscore);
+        System.out.println("SMS Count: " + this.smsCount);
 
     }
     //Example
@@ -120,6 +149,12 @@ public class PARTICIPANT {
      public int getSmsCount(){
 
          return this.smsCount;
+
+     }
+
+     public String getMinJudgeAlias(){
+
+         return this.jAlias[0];
 
      }
 
